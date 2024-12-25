@@ -3,237 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Joana Bureth</title>
+    <title>Air Quality Index</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="shortcut icon"
-      href="/portfolio/assets/favicon.ico"
-      type="image/x-icon"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/5aa8bc0de3.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <!-------------------- HEADER -------------------->
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="./assets/logo_joana.png" class="logo" alt="logo_joana" />
-          <ul id="sidemenu">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#about">A propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p>Développeuse web et logiciel</p>
-          <h1>
-            Hello, Je suis <span>Joana</span> Bureth <br />Bienvenue sur mon
-            portfolio
-          </h1>
+
+    <div class="background-layer"></div>
+
+    <div class="app-container">
+      <h1>Air Quality App.</h1>
+
+      <div class="information-block">
+        <div class="loader active">
+          <img src="ressources/biodegradable.svg" alt="loader icon" class="loader-logo">
         </div>
-      </div>
-    </div>
-    <!-------------------------ABOUT-------------------->
-    <div id="about">
-      <div class="contaier">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="./assets/Joana.jpg" alt="photo Joana" />
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">A propos de moi</h1>
-            <p>
-              Bonjour, je m'appelle Joana Bureth et je suis actuellement en 2ème
-              année de Bachelor en informatique à l'école de l’informatique et
-              du numérique l’IPI. J'ai découvert le monde de l'informatique au
-              détour d'un projet au lycée dont l'objectif était de créer un mini
-              site. Je me suis prise de passion pour ce domaine, ce qui m'a
-              conduit à vouloir en faire mon métier afin de devenir développeuse
-              web.
-            </p>
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-              <p class="tab-links" onclick="opentab('interet')">Intérêts</p>
-            </div>
-            <div class="tab-contents active-tab" id="experience">
-              <ul>
-                <li><span>2024</span><br />Création portfolio personnel</li>
-                <li><span>2024</span><br />Création site de voyage à Porto</li>
-                <li><span>2023-2024</span><br />Création de mini-projets</li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span>2025 - 2025</span><br />Bachelor 2 - Spécialisation en
-                  développement d’application, de logiciels et de sites web
-                </li>
-                <li>
-                  <span>2023 - 2024</span><br />Bachelor 1 - socle de
-                  compétences en développement (algorithmes, code) et en
-                  infrastructures (administration système, bases de données)
-                </li>
-                <li>
-                  <span>2022 - 2023</span><br />BAC Spécialité Physique Chimie
-                  SVT
-                </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="interet">
-              <ul>
-                <li>
-                  <span>Dessin / Design</span><br />Conception d'interfaces
-                  Web/Application
-                </li>
-                <li><span>Développement</span><br />Création de sites Web</li>
-                <li>
-                  <span>Culture asiatique</span><br />Arts, Langue, musique et
-                  civilisation
-                </li>
-              </ul>
-            </div>
-          </div>
+
+        <img src="ressources/magnifying-glass.svg" alt="feeling icon" class="emoji-logo">
+        <p class="user-information">Information sur votre ville.</p>
+
+        <table>
+          <tr>
+            <th class="label">Ville</th>
+            <td class="city-name">...</td>
+          </tr>
+          <tr>
+            <th class="label">Info pollution</th>
+            <td class="pollution-info">...</td>
+          </tr>
+          <tr>
+            <th class="label">Index Air Quality</th>
+            <td class="pollution-value">...</td>
+          </tr>
+        </table>
+
+        <p class="scale-bar-text">Echelle de pollution :</p>
+        <div class="scale-container">
+          <img src="ressources/location.svg" alt="location" class="location-pointer">
+          <div class="scale-section"></div>
+          <div class="scale-section"></div>
+          <div class="scale-section"></div>
+          <div class="scale-section"></div>
+          <div class="scale-section"></div>
+          <div class="scale-section"></div>
         </div>
       </div>
     </div>
 
-    <!-- ----------------------Compétences-------------------- -->
-    <div id="skills">
-      <div class="container">
-        <h1 class="sub-title">Mes compétences</h1>
-        <div class="skills-list">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Langages/Base de données</h2>
-            <img src="https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white" />
-            <img src="https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white" />
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-            <img src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white" />
-            <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white" />
-            <img src="https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white" />
-          </div>
-          <div>
-            <i class="fa-solid fa-crop-simple"></i>
-            <h2>Frameworks</h2>
-            <img src="https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white" />
-            <img src="https://img.shields.io/badge/Symfony-000000?style=flat&logo=symfony&logoColor=white" />
-          </div>
-          <div>
-            <i class="fa-brands fa-app-store"></i>
-            <h2>Outils</h2>
-            <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" />
-            <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white" />
-            <img src="https://img.shields.io/badge/Figma-874fff?logo=figma&logoColor=white&logoSize=auto" />
-            <img src="https://img.shields.io/badge/Canva-02d9c9?logo=canva&logoColor=white&logoSize=auto" />
-            <img src="https://img.shields.io/badge/Microsoft-4b84d3?logo=microsoft&logoColor=white&logoSize=auto">
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ----------------------Projets-------------------- -->
-    <div id="projets">
-      <div class="container">
-        <h1 class="sub-title">Mes projets</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="./assets/resto.jpg" alt="restaurant" />
-            <div class="layer">
-              <h3>Landing page - Le RESTO</h3>
-              <p>
-                Présentation de la page d'accueil d'un site pour un restaurant
-              </p>
-              <a href="https://devjoanabureth.github.io/Restaurant/" target="_blank">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="./assets/agence.jpg" alt="agence de communication" />
-            <div class="layer">
-              <h3>Agence de communication</h3>
-              <p>
-                Présentation de la page d'accueil d'un site d'agence de
-                communication
-              </p>
-              <a href="https://devjoanabureth.github.io/Agence-de-communication" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="./assets/work-3.png" alt="" />
-            <div class="layer">
-              <h3>Ma playlist matinale</h3>
-              <p>Page web de musique</p>
-              <a href="https://devjoanabureth.github.io/Playlist" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <a href="projets.html" class="btn">voir plus</a>
-      </div>
-    </div>
-
-    <!-- ----------------------CONTACT-------------------- -->
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact</h1>
-            <p><i class="fa-solid fa-paper-plane"></i> brth.joana@gmail.com</p>
-            <p><i class="fa-solid fa-square-phone"></i> 06.48.68.38.35</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/joana-bureth"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/fleur.dabricotier?utm_source=qr&igsh=M203YXRxMGk4bmpy"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-            </div>
-            <a
-              href="./assets/CV_Joana_BURETH.pdf"
-              download
-              class="btn btn2"
-              target="_blank"
-              >Mon CV</a
-            >
-          </div>
-          <div class="contact-right">
-            <form>
-              <input type="text" name="Name" placeholder="Nom" required />
-              <input type="email" name="Email" placeholder="Email" required />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Envoyer</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>
-          Copyright <i class="fa-regular fa-copyright"></i> 2024 DevJoanaBureth
-        </p>
-      </div>
-    </div>
-
-    <script src="./app.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
